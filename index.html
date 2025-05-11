@@ -1,39 +1,509 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjusha & Associates</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjusha & Associates | Legal Excellence</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #3b82f6;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <header class="bg-blue-900 text-white p-6">
-        <h1 class="text-3xl">Welcome to Sanjusha & Associates</h1>
-        <p class="mt-2">Your trusted legal partners for Corporate, Civil, Real Estate, and more</p>
-    </header>
-    <main class="container mx-auto p-6">
-        <section>
-            <h2 class="text-2xl font-bold mb-4">Our Services</h2>
-            <ul class="list-disc pl-6">
-                <li>Corporate Law</li>
-                <li>Arbitration</li>
-                <li>Civil Matters</li>
-                <li>Real Estate Matters</li>
-                <li>Criminal Matters</li>
-                <li>Hindu Law</li>
-                <li>Mergers and Acquisitions</li>
-            </ul>
-        </section>
-        <section class="mt-6">
-            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-            <p>Feel free to reach out to us for any inquiries:</p>
-            <p>Email: <a href="mailto:sanjusha@lawfirm.com" class="text-blue-500">sanjusha@lawfirm.com</a></p>
-        </section>
-    </main>
-    <footer class="bg-blue-900 text-white text-center p-4 mt-6">
-        <p>&copy; 2025 Sanjusha & Associates. All Rights Reserved.</p>
-    </footer>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50 backdrop-filter backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold text-blue-700">S<span class="text-gray-800">&</span>A</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home"
+            class="nav-link text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+          <a href="#services"
+            class="nav-link text-gray-700 hover:text-blue-600 font-medium transition duration-300">Services</a>
+          <a href="#about"
+            class="nav-link text-gray-700 hover:text-blue-600 font-medium transition duration-300">About</a>
+          <a href="#contact"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg shadow-md transition duration-300">Contact
+            Us</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen hero-gradient flex items-center justify-center px-6 text-center pt-20">
+    <div class="max-w-4xl animate__animated animate__fadeIn">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+        Sanjusha <span class="text-blue-200">&</span> Associates
+      </h1>
+      <p class="text-xl md:text-2xl text-blue-100 mb-10 font-light">
+        Your trusted legal partners delivering excellence in Corporate, Civil, Real Estate, and more.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#services"
+          class="bg-white hover:bg-gray-100 text-blue-700 px-8 py-4 rounded-lg text-lg font-medium transition duration-300 shadow-lg hover:shadow-xl">
+          Our Services
+        </a>
+        <a href="#contact"
+          class="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-medium transition duration-300 shadow-lg hover:shadow-xl border border-blue-700">
+          Get Legal Advice
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">What We Offer</h2>
+        <h3 class="text-4xl md:text-5xl font-bold text-gray-900">Our Legal Services</h3>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="service-card p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition duration-500 ease-in-out border-t-4 border-blue-600">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-briefcase text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Corporate Law</h3>
+          <p class="text-gray-600">Expert guidance on business formation, compliance, and corporate governance issues.
+          </p>
+        </div>
+
+        <div
+          class="service-card p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition duration-500 ease-in-out border-t-4 border-blue-600">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-gavel text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Arbitration</h3>
+          <p class="text-gray-600">Professional representation in alternative dispute resolution proceedings.</p>
+        </div>
+
+        <div
+          class="service-card p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition duration-500 ease-in-out border-t-4 border-blue-600">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-file-contract text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Civil Matters</h3>
+          <p class="text-gray-600">Comprehensive legal services for all civil litigation and contract disputes.</p>
+        </div>
+
+        <div
+          class="service-card p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition duration-500 ease-in-out border-t-4 border-blue-600">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-home text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Real Estate</h3>
+          <p class="text-gray-600">Legal expertise in property transactions, tenant disputes, and land use matters.</p>
+        </div>
+
+        <div
+          class="service-card p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition duration-500 ease-in-out border-t-4 border-blue-600">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Criminal Matters</h3>
+          <p class="text-gray-600">Strategic defense and representation in all stages of criminal proceedings.</p>
+        </div>
+
+        <div
+          class="service-card p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl transition duration-500 ease-in-out border-t-4 border-blue-600">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-book text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Hindu Law</h3>
+          <p class="text-gray-600">Specialized knowledge in matrimonial, succession, and inheritance matters.</p>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <div class="service-card p-8 bg-blue-600 rounded-2xl shadow-lg text-white">
+          <div class="flex items-start">
+            <div class="w-14 h-14 bg-blue-500 rounded-2xl flex items-center justify-center mr-6">
+              <i class="fas fa-handshake text-3xl text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-3">Mergers & Acquisitions</h3>
+              <p class="text-blue-100">Comprehensive legal guidance throughout the entire M&A process, from due
+                diligence to closing. Our experienced team ensures your business transitions are seamless and legally
+                sound.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Who We Are</h2>
+        <h3 class="text-4xl md:text-5xl font-bold text-gray-900">About Our Firm</h3>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl">
+            <img src="/api/placeholder/1200/800" alt="Law firm office" class="object-cover w-full h-full" />
+          </div>
+        </div>
+        <div>
+          <h4 class="text-3xl font-bold text-gray-800 mb-6">Legal Excellence Since 2010</h4>
+          <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+            Sanjusha & Associates is a premier law firm dedicated to providing exceptional legal services to individuals
+            and businesses alike. Our team of experienced attorneys brings extensive knowledge and a client-centered
+            approach to every case.
+          </p>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+            We pride ourselves on our commitment to excellence, integrity, and achieving the best possible outcomes for
+            our clients. Whether you're facing a complex corporate negotiation or need assistance with real estate
+            matters, our diverse expertise allows us to offer comprehensive legal solutions.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-trophy text-blue-600"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-gray-800">15+ Years</h5>
+                <p class="text-gray-600">Of Experience</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-users text-blue-600"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-gray-800">500+</h5>
+                <p class="text-gray-600">Satisfied Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-2">Client Feedback</h2>
+        <h3 class="text-4xl md:text-5xl font-bold text-gray-900">What Our Clients Say</h3>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-sm">
+          <div class="text-yellow-400 flex mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "Sanjusha & Associates provided exceptional legal guidance during our company's merger. Their attention to
+            detail and strategic approach made a complex process seamless."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+              <span class="font-bold text-blue-600">AB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Anita Bhargava</h4>
+              <p class="text-gray-500 text-sm">CEO, Tech Innovations</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-sm">
+          <div class="text-yellow-400 flex mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "I was impressed by the professionalism and expertise shown in handling my real estate dispute. They kept me
+            informed at every step and achieved a favorable outcome."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+              <span class="font-bold text-blue-600">RK</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Rajiv Kumar</h4>
+              <p class="text-gray-500 text-sm">Property Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-sm">
+          <div class="text-yellow-400 flex mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 italic mb-6">
+            "The team at Sanjusha & Associates demonstrated exceptional knowledge in corporate law. Their counsel was
+            invaluable in navigating regulatory compliance issues."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+              <span class="font-bold text-blue-600">PM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Priya Mehta</h4>
+              <p class="text-gray-500 text-sm">CFO, Global Enterprises</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 bg-blue-600">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="text-white">
+          <h2 class="text-sm font-bold text-blue-200 uppercase tracking-wider mb-2">Connect With Us</h2>
+          <h3 class="text-4xl md:text-5xl font-bold mb-8">Get in Touch</h3>
+          <p class="text-blue-100 text-lg mb-10">
+            Have a legal question or need representation? Our team of experienced attorneys is ready to assist you with
+            all your legal needs.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-map-marker-alt text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Our Office</h4>
+                <p class="text-blue-100">123 Legal Plaza, Financial District, Mumbai 400001</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-phone-alt text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Phone</h4>
+                <p class="text-blue-100">+91 98765 43210</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-envelope text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Email</h4>
+                <p class="text-blue-100">info@sanjushaassociates.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 bg-blue-500 hover:bg-blue-400 rounded-full flex items-center justify-center transition duration-300">
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-blue-500 hover:bg-blue-400 rounded-full flex items-center justify-center transition duration-300">
+              <i class="fab fa-twitter text-white"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-blue-500 hover:bg-blue-400 rounded-full flex items-center justify-center transition duration-300">
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+          <h4 class="text-2xl font-bold text-gray-800 mb-6">Send us a message</h4>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input type="text" id="name"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                  placeholder="Your name">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input type="email" id="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                  placeholder="Your email">
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input type="text" id="subject"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                placeholder="How can we help?">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" rows="5"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                placeholder="Your message"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-medium transition duration-300 shadow-md hover:shadow-lg">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <div class="text-3xl font-bold text-white mb-6">S<span class="text-blue-500">&</span>A</div>
+          <p class="mb-6">
+            Providing exceptional legal services with integrity, expertise, and a client-focused approach since 2010.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#services" class="hover:text-white transition">Our Services</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-white mb-6">Practice Areas</h4>
+          <ul class="space-y-3">
+            <li><a href="#services" class="hover:text-white transition">Corporate Law</a></li>
+            <li><a href="#services" class="hover:text-white transition">Civil Matters</a></li>
+            <li><a href="#services" class="hover:text-white transition">Real Estate</a></li>
+            <li><a href="#services" class="hover:text-white transition">Mergers & Acquisitions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold text-white mb-6">Working Hours</h4>
+          <ul class="space-y-3">
+            <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+            <li>Saturday: 10:00 AM - 2:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2025 Sanjusha & Associates. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuButton = document.querySelector('.fa-bars').parentElement;
+
+      // Add scroll effect to navigation
+      window.addEventListener('scroll', function () {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+          nav.classList.add('shadow-md');
+        } else {
+          nav.classList.remove('shadow-md');
+        }
+      });
+
+      // Smooth scroll for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
-    
